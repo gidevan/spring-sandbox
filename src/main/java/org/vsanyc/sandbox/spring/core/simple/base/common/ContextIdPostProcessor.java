@@ -19,6 +19,8 @@ public class ContextIdPostProcessor implements BeanPostProcessor {
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         Class beanClass = bean.getClass();
         if (beanClass.isAnnotationPresent(ContextIdAnnotation.class)) {
+            System.out.println();
+            System.out.println("ContextIdPostProcessor is working for bean " + beanName);
             Field[] fields = beanClass.getDeclaredFields();
             Optional<Field> field = Stream.of(fields)
                     .filter(f -> "contextId".equals(f.getName()))
