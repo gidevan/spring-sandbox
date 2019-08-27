@@ -18,5 +18,6 @@ public class Main {
     private static void testLifecycle(ApplicationContext context) {
         ExampleBean exampleBean = context.getBean(ExampleBean.class);
         exampleBean.getBeanData();
+
     }
 }
