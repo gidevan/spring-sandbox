@@ -10,12 +10,22 @@ import javax.annotation.PreDestroy;
 /**
  * Created by vano on 26.8.19.
  */
-@Component
+@Component(ExampleConstants.EXAMPLE_BEAN_NAME)
 public class ExampleBean implements Lifecycle, InitializingBean {
+
+    @PostConstruct
+    public void postConstruct2() {
+        System.out.println("Example bean post construct2");
+    }
 
     @PostConstruct
     public void postConstruct() {
         System.out.println("Example bean post construct");
+    }
+
+    @PostConstruct
+    public void postConstruct1() {
+        System.out.println("Example bean post construct1");
     }
 
     @PreDestroy
@@ -25,7 +35,7 @@ public class ExampleBean implements Lifecycle, InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println("Example bean after properties set...");
+        System.out.println("Example bean after properties set(InitializingBean implementation)...");
     }
 
     @Override
