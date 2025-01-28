@@ -4,14 +4,15 @@ plugins {
 
 group = 'org.vsanyc.sandbox'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+sourceCompatibility = '17'
 
 repositories {
 	mavenCentral()
 }
 
 dependencies {
-	compile group: 'org.springframework', name: 'spring-core', version: '5.1.9.RELEASE'
-	compile group: 'org.springframework', name: 'spring-context', version: '5.1.9.RELEASE'
-	compile group: 'org.springframework', name: 'spring-beans', version: '5.1.9.RELEASE'
+	implementation group: 'org.springframework', name: 'spring-core', version: '6.2.2'
+	implementation group: 'org.springframework', name: 'spring-context', version: '6.2.2'
+	implementation group: 'org.springframework', name: 'spring-beans', version: '6.2.2'
+	implementation group: 'jakarta.annotation', name: 'jakarta.annotation-api', version: '3.0.0'
 }

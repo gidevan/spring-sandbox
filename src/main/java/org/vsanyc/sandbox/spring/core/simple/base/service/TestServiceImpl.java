@@ -6,7 +6,7 @@ import org.vsanyc.sandbox.spring.core.simple.base.dao.TestDao;
 
 import java.util.Arrays;
 import java.util.List;
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 
 @Service
 @ContextIdAnnotation(value = "testServiceAnnotationValue")
